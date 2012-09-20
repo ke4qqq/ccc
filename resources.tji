@@ -1,0 +1,26 @@
+resource executives "Executives from Citrix" {
+  resource sameer "Sameer Dhalokia" {
+  }
+  resource peder "Peder Ulander" {
+  }
+  resource kevin "Kevin Kluge" {
+  }
+  resource sheng "Sheng Liang" {
+  }
+}
+
+resource comm "Community Team" {
+  resource karen "Karen Vuong" {
+  }
+  resource mrhinkle "Mark Hinkle" {
+  }
+  resource evan "Evangelists" {
+    resource naevan "NA Evangelists" {
+      resource ke4qqq "David Nalley" {
+      }
+      resource jzb "Joe Brockmeier" {
+      }
+    }
+  }
+}
+

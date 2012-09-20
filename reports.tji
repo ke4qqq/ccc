@@ -1,0 +1,9 @@
+# Show all teams
+taskreport "All Tasks" {
+  headline "CloudStack Collaboration Conference Tasks & Milestones"
+  sorttasks tree, startup
+  columns name, start, end, duration, chart
+  timeformat "%a %Y-%b-%d"
+  loadunit days
+}
+

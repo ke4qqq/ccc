@@ -1,0 +1,19 @@
+  task liveconference "Conference" {
+    task constart "Conference Starts" {
+      start 2012-11-30
+      depends !!venue.rooms.citriterooms { gapduration 45d }
+    }
+    task preparty "Evening event before Conference Starts" {
+      start 2012-11-29
+      duration 3h
+    }
+    task mainparty "Main evening party" {
+      start 2012-11-30
+      duration 4h
+    }
+    task committerparty "Evening event for Apache CloudStack committers" {
+      start 2012-12-1
+      duration 3h
+    }
+  }
+

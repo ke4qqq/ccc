@@ -1,0 +1,13 @@
+k website "Website"{
+    task siteup "Site up - submission possible" {
+      depends !!venue.contract.signcontract
+    }
+    task formatpub "Format of conference published" {
+      depends !!administrivia.deviseformat
+      depends !siteup
+    }
+    task scheduledpub "Schedule Published" {
+      depends !siteup
+    }
+  }
+

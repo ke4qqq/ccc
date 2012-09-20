@@ -1,0 +1,51 @@
+  task venue "Venue"{
+    task contract "Venue Contract" {
+      task requestcontract "Request Contract" {
+      }
+      task signcontract "Sign and send contract" {
+      }
+    }
+    task av "Venue AV" {
+      task defav "Define AV needs" {
+      }
+      task coordav "Coordinate with onsite AV folks" {
+        depends !defav
+        depends !!!administrivia.arrival
+      }
+    }
+    task food "Food and Beverage Planning" {
+      task breakfastday1 "Breakfast for 30th" {
+      }
+      task lunchday1 "Lunch for 30th" {
+      }
+      task breakfastday2 "Breakfast for 1st" {
+      }
+      task lunchday2 "Lunch for 1st" {
+      }
+      task breakfastday3 "Breakfast for 2nd" {
+      }
+    }
+    task rooms "Rooms"{
+      task citriterooms "Citrite Rooms"{
+        start 2012-10-10
+        duration 2d
+        depends !!administrivia.awardtrip
+      }
+      task suite "Determine who is hosting private parties in pilazzo suite (sameer, peder, cloudmonkey)" {
+      }
+      task roomcount1 "Room Count 1 "{
+        start 2012-10-15
+        duration 2h
+      }
+      task roomcount2 "Room Count 2" {
+        # this should tell us how much we have left in our roomcount
+        start 2012-10-25
+        duration 2h
+      }
+      task roomcount3 "Final room count" {
+        # this will tell us how much we have left in our roomblock
+        start 2012-11-01
+        duration 2h
+      }
+      }
+    }
