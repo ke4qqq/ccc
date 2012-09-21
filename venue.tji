@@ -1,12 +1,16 @@
   task venue "Venue"{
     task contract "Venue Contract" {
       task requestcontract "Request Contract" {
+        start 2012-09-19
       }
       task signcontract "Sign and send contract" {
+        depends !requestcontract
+        duration 2d
       }
     }
     task av "Venue AV" {
       task defav "Define AV needs" {
+        depends !!contract.signcontract
       }
       task coordav "Coordinate with onsite AV folks" {
         depends !defav
@@ -15,23 +19,29 @@
     }
     task food "Food and Beverage Planning" {
       task breakfastday1 "Breakfast for 30th" {
+        depends !!contract.signcontract {gapduration 10d}
       }
       task lunchday1 "Lunch for 30th" {
+        depends !!contract.signcontract {gapduration 10d}
       }
       task breakfastday2 "Breakfast for 1st" {
+        depends !!contract.signcontract {gapduration 10d}
       }
       task lunchday2 "Lunch for 1st" {
+        depends !!contract.signcontract {gapduration 10d}
       }
       task breakfastday3 "Breakfast for 2nd" {
+        depends !!contract.signcontract {gapduration 10d}
       }
     }
     task rooms "Rooms"{
       task citriterooms "Citrite Rooms"{
         start 2012-10-10
         duration 2d
-        depends !!administrivia.awardtrip
+        depends !!!administrivia.awardtrip
       }
       task suite "Determine who is hosting private parties in pilazzo suite (sameer, peder, cloudmonkey)" {
+        start 2012-11-01
       }
       task roomcount1 "Room Count 1 "{
         start 2012-10-15

@@ -1,4 +1,4 @@
-k website "Website"{
+ task website "Website"{
     task siteup "Site up - submission possible" {
       depends !!venue.contract.signcontract
     }

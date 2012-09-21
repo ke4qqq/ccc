@@ -1,0 +1,14 @@
+  task administrivia "Administrivia" {
+    task awardtrip "Figure out who is attending from Citrix"{
+      start 2012-09-21
+      duration 1w
+      complete 0
+    }
+    task deviseformat "Devise format" {
+      start 2012-09-21
+      complete 100
+    }
+    task arrival "Team arrival onsite" {
+      start 2012-11-28
+    }
+  }

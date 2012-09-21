@@ -7,3 +7,16 @@ taskreport "All Tasks" {
   loadunit days
 }
 
+htmlweeklycalendar "Calendar.html" {
+}
+
+htmlstatusreport "Status-Report.html" {
+}
+
+
+htmltaskreport "cloudstack-collab-all-tasks.html" {
+    headline "Tasks"
+    columns name, start, end, duration
+    sorttasks tree, startup
+    timeformat "%a %Y-%m-%d"
+}

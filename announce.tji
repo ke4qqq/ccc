@@ -1,0 +1,11 @@
+  task announce "Announcements" {
+    task announcecon "Announce conference"{
+      depends !!website.siteup
+    }
+    task anncfp "Announce CFP is open"{
+      depends !!cfpphase.openCFP
+    }
+    task anntalks "Announce Selected talks"{
+      depends !!cfpphase.evaluatetalks
+    }
+  }

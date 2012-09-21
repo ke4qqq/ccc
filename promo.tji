@@ -1,0 +1,59 @@
+  task promotion "Promotion" {
+    task blogbadges "Create badges for bloggers"{
+      depends !!website.siteup
+    }
+    task blog "Began blogging about the event" {
+      depends !!website.siteup
+      task blog1 "First blog" {
+        start 2012-09-26
+        duration 3h
+      }
+      task blog2 "Second blog" {
+        duration 3h
+        depends !blog1 {gapduration 5d}
+      }
+      task blog3 "Third blog" {
+        duration 3h
+        depends !blog2 {gapduration 5d}
+      }
+      task blog4 "Fourth blog" {
+        duration 3h
+        depends !blog3 {gapduration 5d}
+      }
+      task blog5 "Fifth blog" {
+        duration 3h
+        depends !blog4 {gapduration 5d}
+      }
+      task blog6 "Sixth blog" {
+        duration 3h
+        depends !blog5 {gapduration 5d}
+      }
+      task blog7 "Seventh blog" {
+        duration 3h
+        depends !blog6 {gapduration 5d}
+      }
+      task blog8 "Eigth blog" {
+        duration 3h
+        depends !blog7 {gapduration 5d}
+      }
+      task blog9 "Ninth blog" {
+        duration 3h
+        depends !blog8 {gapduration 5d}
+      }
+      task blog10 "Tenth and final blog" {
+        duration 3h
+        depends !blog9 {gapduration 5d}
+      }
+    }
+    task postcards "Postcards for re:Invent"{
+      task pcdesign "Design postcards"{
+        depends !!!website.siteup
+      }
+      task postcardspublished "Print Postcards"{
+        depends !pcdesign
+      }
+      task postcardsshipped "Postcards shipped to venue"{
+        depends !postcardspublished
+      }
+    }
+  }

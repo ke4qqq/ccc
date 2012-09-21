@@ -1,0 +1,14 @@
+  task cfpphase "CFP"{
+    task encouragepart "Encourage Speaker Submissions" {
+      start 2012-09-24
+    }
+    task openCFP "CFP Open"{
+      depends !!website.siteup
+      start 2012-09-24
+      length 10d
+    }
+    task evaluatetalks "Program Committee reviews and selects talks" {
+      depends !openCFP
+      length 5d
+    }
+  }
