@@ -15,6 +15,10 @@ resource comm "Community Team" {
   resource mrhinkle "Mark Hinkle" {
   }
   resource evan "Evangelists" {
+    resource euevan "EU Evangelists" {
+      resource sebgoa "Sebastien Goasguen" {
+      }
+    }
     resource naevan "NA Evangelists" {
       resource ke4qqq "David Nalley" {
       }
