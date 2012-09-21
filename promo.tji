@@ -2,10 +2,10 @@
     task blogbadges "Create badges for bloggers"{
       depends !!website.siteup
     }
-    task blog "Began blogging about the event" {
+    task blog "Begin blogging about the event" {
       depends !!website.siteup
       task blog1 "First blog" {
-        start 2012-09-26
+          start 2012-09-24
         duration 3h
       }
       task blog2 "Second blog" {
