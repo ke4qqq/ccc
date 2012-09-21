@@ -1,11 +1,27 @@
   task promotion "Promotion" {
+    task press "Generate Press for/after the event"{
+      task list "Create press list."{
+        start 2012-09-21
+        duration 3d
+      }
+      task outreach "Invite press to event."{
+        start 2012-09-25
+        duration 2d
+        depends !list
+      }
+      task announce.keynotes "Announce keynotes for event."{
+        start 2012-10-11
+        duration 1d
+        depends !!cfpphase.keynotes
+      }
+    }
     task blogbadges "Create badges for bloggers"{
       depends !!website.siteup
     }
-    task blog "Began blogging about the event" {
+    task blog "Begin blogging about the event" {
       depends !!website.siteup
       task blog1 "First blog" {
-        start 2012-09-26
+          start 2012-09-24
         duration 3h
       }
       task blog2 "Second blog" {

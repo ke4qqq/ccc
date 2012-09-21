@@ -11,4 +11,8 @@
       depends !openCFP
       length 5d
     }
+    task keynotes "Select keynotes" {
+      depends !openCFP
+      length 2d
+    }
   }
